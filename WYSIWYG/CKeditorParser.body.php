@@ -1471,7 +1471,7 @@ class CKeditorParser extends CKeditorParserWrapper {
 	 */
 	private function replaceRichmediaLinkValue($match) {
         $orig = "[[".$match."]]";
-		if ($match && $match{0} == ":") $match = substr($match, 1);
+		if ($match && $match[0] == ":") $match = substr($match, 1);
 		if (strpos($match, ":") === false)
 			return $orig;
 		$ns = substr($match, 0, strpos($match, ':'));
@@ -1578,7 +1578,7 @@ class CKeditorParser extends CKeditorParserWrapper {
     public function fck_allTags( $matches ) {
         // check for tag attributes
         $attr = array();
-        if ($matches[1]{0} != ">") {
+        if ($matches[1][0] != ">") {
 	
 			//23.11.14 RL->
 			// This is original code where explode() using space as delimiter,
