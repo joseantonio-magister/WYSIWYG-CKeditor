@@ -1118,7 +1118,7 @@ class CKeditorParser extends CKeditorParserWrapper {
 		$target = $matches['title'];		
 		$title = '';
 		$part = '';                                            // 15.08.16 RL
-		for ($i= 0; $i<count($matches['parts']); $i++) {
+		for ($i= 0; $i<count($matches['parts'] ?? []); $i++) {
 			$part = $matches['parts'][$i];                     // 15.08.16 RL->
 
 			// Escape possible link characters [[, ]], [ and ] inside captions of images, this makes
